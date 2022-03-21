@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgetpassword.component.css']
 })
 export class ForgetpasswordComponent implements OnInit {
+  otpSection: boolean =  false;
 
   constructor(public myRouter:Router) { }
 
@@ -14,5 +15,9 @@ export class ForgetpasswordComponent implements OnInit {
   }
 gotologin(){
   this.myRouter.navigateByUrl('/login')
+}
+
+submitMail() {
+  this.otpSection = true;
 }
 }

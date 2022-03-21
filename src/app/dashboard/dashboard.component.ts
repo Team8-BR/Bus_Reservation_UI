@@ -7,12 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  page: boolean =  false;
   constructor(public myRouter:Router) { }
 
   ngOnInit(): void {
   }
 gotohome(){
   this.myRouter.navigateByUrl('/')
+}
+mydashboard(){
+  this.page= !this.page;
 }
 }
