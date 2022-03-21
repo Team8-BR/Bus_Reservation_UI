@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light m-4" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Bus Reservation System</a>
+    </div>
+</nav>
+<div class="mainContent">
+    <div class="details">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold">Login</a>
+                <button class="btn btn-outline-success fw-bold" (click)="gotoSignup()">Sign-Up</button>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="loginDetails">
+                <input type="email" id="defaultLoginFormEmail" class="form-control" placeholder="E-mail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="loginDetails">
+                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+            </div>
+                <div class="actions">
+                    <button class="btn btn-outline-success fw-bold m-2" (click)="doLogin()">Login</button>
+                    <button class="btn btn-outline-danger fw-bold m-2"(click)="gotohome()">Cancel</button>
+                </div>
+                <div>
+                    <button class="btn btn-outline-info m-2 fw-bold" (click)="gotoForgetpassword()" style="float: right">Forget Password</button>
+                </div>
+        </div>
+    </div>
+</div>
+            

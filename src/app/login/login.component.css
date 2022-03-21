@@ -1,0 +1,19 @@
+.mainContent {
+    margin-left: 500px;
+    margin-right: 500px;
+    width: 700px;
+}
+.details {
+    border: 1px solid black;
+    margin: 4px;
+}
+
+.loginDetails {
+    width: 350px;
+    margin-left: 200px;
+    margin-top: 3rem;
+}
+
+.actions {
+    margin-left:  270px;
+}
