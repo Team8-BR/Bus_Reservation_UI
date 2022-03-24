@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginServiceService } from '../login-service.service';
+import { UserserviceService } from '../userservice.service';
 
 @Component({
   selector: 'app-header',
@@ -8,21 +10,18 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router, ) { }
+  constructor(private router: Router, private loginService: LoginServiceService, private userService: UserserviceService) { }
 
   ngOnInit() {
   }
   get isAdminLogin() {
-    return
-    // return this.loginService.isAdminLogin();
+    return this.loginService.isAdminLogin();
   }
   get isOwnerLogin() {
-    return
-    // return this.loginService.isOwnerLogin();
+    return this.loginService.isOwnerLogin();
   }
   get isCustomerLogin() {
-    return
-    // return this.loginService.isCustomerLogin();
+    return this.loginService.isCustomerLogin();
   }
   get getavalia() {
     return

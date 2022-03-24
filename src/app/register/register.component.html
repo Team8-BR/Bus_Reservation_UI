@@ -35,6 +35,14 @@
             <p class="alert alert-danger"> This field is required</p>
         </div>
     </div>
+    <div class="form-group">
+        <label for="userPassword" class="text-success">Confirm Password </label>
+        <input type="password" #userPassword="ngModel" ngModel name="userPassword" id="userPassword"
+            class="form-control" required placeholder="Enter password">
+        <div *ngIf="userPassword.touched && userPassword.invalid">
+            <p class="alert alert-danger"> This field is required</p>
+        </div>
+    </div>
 
     <div class="form-group">
         <label for="userMobile" class="text-success">Contact Number </label>
