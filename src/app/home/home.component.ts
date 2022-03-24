@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { BusService } from './bus.service';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +7,9 @@ import { BusService } from './bus.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public myRouter: Router, public busSer: BusService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  goToLogin() {
-      this.myRouter.navigateByUrl('/login')
-  }
-
-  getBus () {
-   const availableBus =  this.busSer.getBus()
-  }
 }

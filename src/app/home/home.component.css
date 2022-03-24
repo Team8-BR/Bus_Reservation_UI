@@ -1,20 +1,4 @@
-.mainContent {
-    margin-left: 500px;
-    margin-right: 500px;
-    width: 700px;
-}
-
-.details {
-    border: 1px solid black;
-    margin: 4px;
-}
-
-.content {
-    width: 200px
-}
-
-#searchBus {
-    align-items: center;
-    margin-left: 250px;
-    margin-bottom: 4px;
+.card-body{
+    text-align: center;
+    background-color:snow
 }

@@ -1,36 +1,38 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
-const appRoutes: Routes = [
-{path: '', component: HomeComponent},
-{path: 'login', component: LoginComponent},
-{path: 'register', component: SignupComponent},
-{path:'Forgetpassword',component: ForgetpasswordComponent},
-{path:'dashboard',component: DashboardComponent}
-]
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'login',component:LoginComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    HeaderComponent,
     HomeComponent,
-    SignupComponent,
-    ForgetpasswordComponent,
-    DashboardComponent
+    FooterComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

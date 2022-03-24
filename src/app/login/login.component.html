@@ -1,33 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-light m-4" style="background-color: #e3f2fd;">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">Bus Reservation System</a>
-    </div>
-</nav>
-<div class="mainContent">
-    <div class="details">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold">Login</a>
-                <button class="btn btn-outline-success fw-bold" (click)="gotoSignup()">Sign-Up</button>
-            </div>
-        </nav>
-        <div class="row">
-            <div class="loginDetails">
-                <input type="email" id="defaultLoginFormEmail" class="form-control" placeholder="E-mail">
-            </div>
-        </div>
-        <div class="row">
-            <div class="loginDetails">
-                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-            </div>
-                <div class="actions">
-                    <button class="btn btn-outline-success fw-bold m-2" (click)="doLogin()">Login</button>
-                    <button class="btn btn-outline-danger fw-bold m-2"(click)="gotohome()">Cancel</button>
+<div class="col-md-4 offset-4 mt-6 card" style="background:darkgrey">
+    <div class="card-body">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <h1 class="h1 text-center">Login Form</h1>
+            <div class="form-group">
+                <label for="userId" class="text-success">User Id</label>
+                <input type="number" #userId="ngModel" ngModel name="userId" id="userId" class="form-control"
+                    placeholder="Enter User Id">
+                <div *ngIf="userId.touched && userId.invalid">
+                    <p class="alert alert-danger"> *This field is required</p>
                 </div>
-                <div>
-                    <button class="btn btn-outline-info m-2 fw-bold" (click)="gotoForgetpassword()" style="float: right">Forget Password</button>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="text-success">User Password</label>
+                <input type="password" #userPassword="ngModel" ngModel name="userPassword" id="userPassword"
+                    class="form-control" required placeholder="Enter User Password">
+                <div *ngIf="userPassword.touched && userPassword.invalid">
+                    <p class="alert alert-danger"> This field is required</p>
                 </div>
-        </div>
+            </div>
+            <button type="submit" class="btn btn-outline-info btn-block form-control">login</button>
+        </form>
     </div>
 </div>
-            

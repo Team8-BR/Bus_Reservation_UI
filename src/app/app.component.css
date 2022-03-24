@@ -1,4 +1,4 @@
-p {
-    color: red;
-    font-size: large;
+.card-body{
+    text-align: center;
+    background-color:snow
 }
