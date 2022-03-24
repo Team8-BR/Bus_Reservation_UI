@@ -12,17 +12,6 @@ export class BookTicketComponent implements OnInit {
   ngOnInit() {
   }
   bookTicket(bookTicketForm: NgForm) {
-    // this.usrService.bookTicket(bookTicketForm.value).subscribe(tickets => {
-    //   if (tickets != null) {
-    //     console.log(tickets);
-    //     alert('Ticket Booked Successfully please note id to alter ticket' + `${tickets.ticket.bookingId}` );
-    //     bookTicketForm.reset();
-    //   } else {
-    //     console.log(tickets);
-    //     alert('Failed To Book Ticket');
-    //     bookTicketForm.reset();
-    //   }
-    // }
-    // );
+  
   }
 }

@@ -14,19 +14,7 @@ export class UpdateUserComponent implements OnInit {
   ngOnInit() {
   }
   user(updateUser: NgForm) {
-    // this.userService.updateUser(updateUser.value).subscribe(bus => {
-    //   this.userr = bus;
-    //   if (bus.message === 'Success') {
-    //     console.log(bus);
-    //     alert('User Updated Successfully');
-    //     updateUser.reset();
-    //   } else {
-    //     console.log(bus);
-    //     alert('Failed To Update User');
-    //     updateUser.reset();
-    //   }
-    // }
-    // );
+  
 
   }
 }

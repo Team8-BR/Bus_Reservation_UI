@@ -14,18 +14,6 @@ export class DeleteBusComponent implements OnInit {
   ngOnInit() {
   }
   deleteBusMethod(deleteBus: NgForm) {
-    // this.userService.deleteBus(deleteBus.value.busId).subscribe(bus => {
-    //   this.buss = bus;
-    //   if (this.buss.message === 'Success') {
-    //     console.log(bus);
-    //     alert('Bus Deleted Successfully');
-    //     deleteBus.reset();
-    //   } else {
-    //     console.log(bus);
-    //     alert('Failed To deleteBus');
-    //     deleteBus.reset();
-    //   }
-    // }
-    // );
+
   }
 }

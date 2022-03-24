@@ -16,20 +16,6 @@ export class CheckAvaliabilityComponent implements OnInit {
   ngOnInit() {
   }
   checkAvail(checkAvailForm : any) {
-    // this.userService.chechAvail(checkAvailForm.value).subscribe(data => {
 
-    //   if (data.availList != null) {
-    //     this.avails = data.availList;
-    //     alert('Availability Check Successfully');
-    //     this.check = true;
-    //     this.userService.avail = true;
-    //     checkAvailForm.reset();
-    //   } else {
-    //     console.log(data);
-    //     alert('No Availability on that day');
-    //     checkAvailForm.reset();
-    //     this.check = false;
-    //   }
-    // });
   }
 }

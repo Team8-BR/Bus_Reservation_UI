@@ -14,16 +14,7 @@ export class CancelTicketComponent implements OnInit {
   ngOnInit() {
   }
   cancelTicketFormMethod(cancelTicketForm: NgForm) {
-    // this.userService.cancelTicket(cancelTicketForm).subscribe(tickets1 => {
-    //   if (tickets1.message === 'Success') {
-    //     console.log(tickets1);
-    //     alert('Ticket Deleted Successfully');
-    //     cancelTicketForm.reset();
-    //   } else {
-    //     console.log(tickets1);
-    //     alert('Failed To Delete Ticket not exist');
-    //   }
-    // });
+ 
   }
 
 

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   login(loginForm: NgForm) {
-    // this.http.post<any>(`http://localhost:8080/ParallelProjectByusing_SpringRest/login`, loginForm.value).subscribe(data => {
+    // this.http.post<any>(`http://localhost:1920/api/Customer/InsertData`, loginForm.value).subscribe(data => {
     //   console.log(data.user.type);
       // this.users = data.user;
       // if (data.user.type === 'owner') {

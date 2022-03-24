@@ -17,25 +17,7 @@ export class RemoveOwnerComponent implements OnInit {
   ngOnInit() {
   }
   remove(id: NgForm) {
-  //   this.userService.removeOwner(id.value.userId).subscribe(data => {
-  //     if (data != null) {
-  //       console.log(data);
-  //       alert('User Deleted Succesfully');
-  //       id.reset();
-  //       this.getAllOwners();
-  //     } else {
-  //       console.log(data);
-  //       alert('Failed TO Delete Owner');
-  //       id.reset();
-  //     }
-  //   });
-  // }
-  // getAllOwners() {
-  //   this.userService.getAllOwner().subscribe(data => {
-  //     console.log(data);
-  //     this.owners = data.userList;
-  //   }
-  //   );
+
   }
 
 }

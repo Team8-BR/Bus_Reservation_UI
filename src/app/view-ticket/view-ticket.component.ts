@@ -15,18 +15,7 @@ export class ViewTicketComponent implements OnInit {
   ngOnInit() {
   }
   viewTicketFormMethod(viewTicketForm: NgForm) {
-    // this.userService.viewTicket(viewTicketForm).subscribe(tickets1 => {
-    //   this.tickets = tickets1;
-    //   if (tickets1.message === 'Success') {
-    //     console.log(tickets1);
-    //     alert('Ticket Fetched Successfully');
-    //     this.show = true;
-    //   } else {
-    //     console.log(tickets1);
-    //     console.log(tickets1);
-    //     alert('Failed To Fetch Ticket not exist');
-    //   }
-    // });
+   
   }
 
 }

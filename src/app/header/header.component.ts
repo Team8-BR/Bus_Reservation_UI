@@ -25,13 +25,13 @@ export class HeaderComponent implements OnInit {
   }
   get getavalia() {
     return
-  //  return this.userService.avail;
+
   }
   logout() {
-  //   this.loginService.isAdminLoggedIn = false;
-  //   this.loginService.isOwnerLoggedIn = false;
-  //   this.loginService.isCustomerLoggedIn = false;
-  //   this.router.navigateByUrl('/');
+    this.loginService.isAdminLoggedIn = false;
+    this.loginService.isOwnerLoggedIn = false;
+    this.loginService.isCustomerLoggedIn = false;
+    this.router.navigateByUrl('/');
   }
   register(){
     this.router.navigateByUrl("/register")
