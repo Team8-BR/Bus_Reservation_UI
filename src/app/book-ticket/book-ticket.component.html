@@ -3,7 +3,7 @@
         <h1 class="bg-info text-light card" align="center">Book Ticket</h1>
         <h6 class="text-danger float-right">*Required Fields</h6>
         <div class="form-group">
-            <label for="busId" class="text-success">Seats to book
+            <label for="busId" class="text-success">Enter Bus Id
             </label>
             <input type="text" #busId="ngModel" ngModel name="busId" id="busId" class="form-control"
                 required placeholder="Enter  Bus Id">
@@ -14,7 +14,7 @@
         <div class="form-group">
             <label for="numOfSeats" class="text-success">No of Seats to book
             </label>
-            <input type="text" #numOfSeats="ngModel" ngModel name="numOfSeats" id="numOfSeats" class="form-control"
+            <input type="number" #numOfSeats="ngModel" ngModel name="numOfSeats" id="numOfSeats" class="form-control"
                 required placeholder="Enter number of seats">
             <div *ngIf="numOfSeats.touched && numOfSeats.invalid">
                 <p class="alert alert-danger"> This field is required</p>

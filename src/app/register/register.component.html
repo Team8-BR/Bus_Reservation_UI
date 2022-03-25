@@ -11,18 +11,60 @@
     </div>
 
     <div class="form-group">
-        <label for="userName" class="text-success">Name</label>
-        <input type="text" #userName="ngModel" ngModel name="userName" id="userName" class="form-control" required placeholder="Enter user name">
-        <div *ngIf="userName.touched && userName.invalid">
+        <label for="firstName" class="text-success">First Name</label>
+        <input type="text" #firstName="ngModel" ngModel name="firstName" id="firstName" class="form-control" required placeholder="Enter first name">
+        <div *ngIf="firstName.touched && firstName.invalid">
             <p class="alert alert-danger"> This field is required</p>
         </div>
     </div>
+    
+
+    <div class="form-group">
+        <label for="lastName" class="text-success">Last Name</label>
+        <input type="text" #lastName="ngModel" ngModel name="lastName" id="lastName" class="form-control" required placeholder="Enter last name">
+        <div *ngIf="lastName.touched && lastName.invalid">
+            <p class="alert alert-danger"> This field is required</p>
+        </div>
+    </div>
+
+    <label for="dateOfBirth" class="text-success"> <b>Date Of Birth </b></label>
+                        <input type="date" #availableDate="ngModel" ngModel name="dateOfBirth" id="dateOfBirth"
+                            class="form-control">
+
+    <div class="form-group">
+        <label for="gender" class="text-success">Gender</label>
+        <input type="email" #gender="ngModel" ngModel name="gender" id="gender" class="form-control"
+            required placeholder="Enter user email">  
+        <div *ngIf="gender.touched && gender.invalid">
+             <p class="alert alert-danger"> This field is required</p>
+         </div>
+     </div>                        
+
+    
 
     <div class="form-group">
         <label for="userEmail" class="text-success">Email</label>
         <input type="email" #userEmail="ngModel" ngModel name="userEmail" id="userEmail" class="form-control"
             required placeholder="Enter user email">  
         <div *ngIf="userEmail.touched && userEmail.invalid">
+            <p class="alert alert-danger"> This field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="address" class="text-success">Address </label>
+        <input type="address" #address="ngModel" ngModel name="address" id="address"
+            class="form-control" required placeholder="Enter address">
+        <div *ngIf="address.touched && address.invalid">
+            <p class="alert alert-danger"> This field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="city" class="text-success">City </label>
+        <input type="password" #city="ngModel" ngModel name="city" id="city"
+            class="form-control" required placeholder="Enter city">
+        <div *ngIf="city.touched && city.invalid">
             <p class="alert alert-danger"> This field is required</p>
         </div>
     </div>
@@ -35,6 +77,7 @@
             <p class="alert alert-danger"> This field is required</p>
         </div>
     </div>
+
     <div class="form-group">
         <label for="userPassword" class="text-success">Confirm Password </label>
         <input type="password" #userPassword="ngModel" ngModel name="userPassword" id="userPassword"

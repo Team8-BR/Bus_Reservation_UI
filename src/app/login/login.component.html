@@ -19,7 +19,7 @@
                     <p class="alert alert-danger"> This field is required</p>
                 </div>
             </div>
-            <button type="submit" class="btn btn-outline-info btn-block form-control">login</button>
+            <button type="submit" class="btn btn-outline-info btn-block form-control" [disabled]="loginForm.invalid">login</button>
         </form>
     </div>
 </div>
