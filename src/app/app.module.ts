@@ -23,6 +23,7 @@ import { GiveFeedbackComponent } from './give-feedback/give-feedback.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { AddOwnerComponent } from './add-owner/add-owner.component';
 import { RemoveOwnerComponent } from './remove-owner/remove-owner.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 const routes: Routes = [
@@ -41,7 +42,8 @@ const routes: Routes = [
    {path: 'checkAvaliability', component: CheckAvaliabilityComponent},
   {path: 'updateUser', component: UpdateUserComponent},
   {path: 'cancelTicket', component: CancelTicketComponent},
-  {path: 'giveFeedback', component: GiveFeedbackComponent}
+  {path: 'giveFeedback', component: GiveFeedbackComponent},
+  {path: 'makepayment', component: PaymentComponent}
 ];
 
 @NgModule({
@@ -64,7 +66,8 @@ const routes: Routes = [
     UpdateUserComponent,
     AddOwnerComponent,
     RemoveOwnerComponent,
-    RemoveOwnerComponent
+    RemoveOwnerComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

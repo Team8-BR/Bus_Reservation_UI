@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserserviceService } from '../userservice.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-book-ticket',
@@ -8,10 +10,12 @@ import { UserserviceService } from '../userservice.service';
   styleUrls: ['./book-ticket.component.css']
 })
 export class BookTicketComponent implements OnInit {
-  constructor(private usrService: UserserviceService) { }
+  constructor(private router: Router, private userService: UserserviceService) { }
   ngOnInit() {
   }
   bookTicket(bookTicketForm: NgForm) {
-  
+
+    this.router.navigateByUrl('/makepayment')
+    
   }
 }
