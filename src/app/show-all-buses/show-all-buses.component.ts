@@ -14,6 +14,9 @@ export class ShowAllBusesComponent implements OnInit {
   }
 
   getBuses() {
-   
+    this.userService.showAllBus().subscribe(data => {
+      console.log(data);
+      this.buses = data.busList;
+    });
   }
 }

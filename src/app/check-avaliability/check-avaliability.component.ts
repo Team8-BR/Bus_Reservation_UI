@@ -16,6 +16,9 @@ export class CheckAvaliabilityComponent implements OnInit {
   ngOnInit() {
   }
   checkAvail(checkAvailForm : any) {
-
+    const userDetails = checkAvailForm.form.value;
+    this.userService.setAvaliability(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
   }
 }

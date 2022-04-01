@@ -14,7 +14,10 @@ export class CancelTicketComponent implements OnInit {
   ngOnInit() {
   }
   cancelTicketFormMethod(cancelTicketForm: NgForm) {
- 
+    const userDetails = cancelTicketForm.form.value;
+    this.userService.cancelTicket(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
   }
 
 

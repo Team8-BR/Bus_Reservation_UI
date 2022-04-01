@@ -14,6 +14,9 @@ export class DeleteBusComponent implements OnInit {
   ngOnInit() {
   }
   deleteBusMethod(deleteBus: NgForm) {
-
+    const userDetails = deleteBus.form.value;
+    this.userService.deleteBus(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
   }
 }

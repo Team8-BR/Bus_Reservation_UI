@@ -16,8 +16,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
   user(registerUser: NgForm) {
-    
-    this.router.navigateByUrl('/login')
+    const userDetails = registerUser.form.value;
+    this.userService.register(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
+    // this.router.navigateByUrl('/login')
   }
 
 }

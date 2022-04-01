@@ -14,7 +14,10 @@ export class UpdateBusComponent implements OnInit {
   ngOnInit() {
   }
   updateBusInfo(updateBus: NgForm) {
-  
+    const userDetails = updateBus.form.value;
+    this.usrService.updateBus(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
   }
 
 }

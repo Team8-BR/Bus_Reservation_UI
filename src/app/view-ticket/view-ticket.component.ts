@@ -15,7 +15,10 @@ export class ViewTicketComponent implements OnInit {
   ngOnInit() {
   }
   viewTicketFormMethod(viewTicketForm: NgForm) {
-   
+    const userDetails = viewTicketForm.form.value;
+    this.userService.viewTicket(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
   }
 
 }

@@ -14,8 +14,11 @@ export class BookTicketComponent implements OnInit {
   ngOnInit() {
   }
   bookTicket(bookTicketForm: NgForm) {
-
-    this.router.navigateByUrl('/makepayment')
+    const userDetails = bookTicketForm.form.value;
+    this.userService.bookTicket(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
+    //this.router.navigateByUrl('/makepayment')
     
   }
 }
