@@ -15,9 +15,17 @@ export class AddBusComponent implements OnInit {
   ngOnInit() {
   }
   addBus(createBus: NgForm) {
-    const userDetails = createBus.form.value;
-    this.usrService.addBus(userDetails).subscribe((res: any)=>{
-      console.log(res)
-  });
+    this.usrService.addBus(createBus.value).subscribe(bus => {
+      if (bus != null) {
+        console.log(bus);
+        alert('Bus Added Successfully');
+        createBus.reset();
+      } else {
+        console.log(bus);
+        alert('Failed To AddBus');
+        createBus.reset();
+      }
+    }
+    );
 }
 }

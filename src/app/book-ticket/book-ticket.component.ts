@@ -14,11 +14,19 @@ export class BookTicketComponent implements OnInit {
   ngOnInit() {
   }
   bookTicket(bookTicketForm: NgForm) {
-    const userDetails = bookTicketForm.form.value;
-    this.userService.bookTicket(userDetails).subscribe((res)=>{
-      console.log(res)
-    })
-    //this.router.navigateByUrl('/makepayment')
+    this.userService.bookTicket(bookTicketForm.value).subscribe(tickets => {
+      if (tickets != null) {
+        console.log(tickets);
+        alert('Ticket Booked Successfully please note id to alter ticket' + `${tickets.ticket.bookingId}` );
+        bookTicketForm.reset();
+      } else {
+        console.log(tickets);
+        alert('Failed To Book Ticket');
+        bookTicketForm.reset();
+      }
+    }
+    );
+    this.router.navigateByUrl('/makepayment')
     
   }
 }

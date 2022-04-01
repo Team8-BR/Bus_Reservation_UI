@@ -16,10 +16,20 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
   user(registerUser: NgForm) {
-    const userDetails = registerUser.form.value;
-    this.userService.register(userDetails).subscribe((res)=>{
-      console.log(res)
-    })
+    this.userService.register(registerUser.value).subscribe(data => {
+      if (data.user != null) {
+        console.log(data);
+        // window.confirm('Registration Successfull');
+        alert('Registration Successfull');
+        registerUser.reset();
+        this.router.navigateByUrl('login');
+      } else {
+        console.log(data);
+        // console.log("NO Output");
+        alert('ENTER CORRECT CREDENTAILS');
+        registerUser.reset();
+      }
+    });
     // this.router.navigateByUrl('/login')
   }
 

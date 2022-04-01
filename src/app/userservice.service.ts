@@ -5,6 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserserviceService {
+  removeOwner(userId: any) {
+    throw new Error('Method not implemented.');
+  }
+  chechAvail(value: any) {
+    throw new Error('Method not implemented.');
+  }
  userUrl = 'http://localhost:1902/api/Customer/InsertData';
  addBusUrl='http://localhost:1902/api/BusDetails/InsertData';
  updateBusUrl='http://localhost:1902/api/BusSchedule/InsertData';
@@ -43,8 +49,8 @@ bookTicket(data: any) {
 cancelTicket(data: { bookingId: any; }) {
   return this.http.delete<any>(`${this.userUrl}/deleteTicket/${data.bookingId}`);
 }
-viewTicket(data: { bookingId: any; }) {
-  return this.http.get<any>(`${this.userUrl}/getTicket/${data.bookingId}`);
+viewTicket(data: any) {
+  return this.http.put(`${this.userUrl}/getTicket`, data);;
 }
 makePayment(data: any) {
   return this.http.put(`${this.userUrl}/payment`, data);
