@@ -15,8 +15,11 @@ export class PaymentComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  makePayment(createBus: NgForm) {
-
+  makePayment(makePayment: NgForm) {
+    const userDetails = makePayment.form.value;
+    this.userService.makePayment(userDetails).subscribe((res)=>{
+      console.log(res)
+    })
     this.router.navigateByUrl('/viewTicket')
     
   }

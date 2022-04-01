@@ -14,6 +14,7 @@ export class UserserviceService {
  bookTicketUrl='http://localhost:1902/api/Ticket Booking/InsertData';
  cancelTicketUrl='http://localhost:1902/api/TicketCancellation/id';
  viewTickersUrl='http://localhost:1902/api/TicketBooking/Id';
+ paymentUrl='http://localhost:1902/api/Payments/InsertData';
  constructor(private http: HttpClient) { }
  
  register(data: any) {
@@ -44,5 +45,8 @@ cancelTicket(data: { bookingId: any; }) {
 }
 viewTicket(data: { bookingId: any; }) {
   return this.http.get<any>(`${this.userUrl}/getTicket/${data.bookingId}`);
+}
+makePayment(data: any) {
+  return this.http.put(`${this.userUrl}/payment`, data);
 }
 }
